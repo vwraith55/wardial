@@ -1,16 +1,24 @@
-name: Run Tests
-on: [push]
+name: tests
+
+on:
+  push:
+  pull_request:
+
 jobs:
-  test:
+  doctest:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-      - name: Install dependencies
+          python-version: '3.11'
+
+      - name: Install requests
         run: pip install requests
+
       - name: Run doctests
-        run: python3 -m doctest wardial.py -v
-````
+        run: python -m doctest wardial.py -v
