@@ -2,7 +2,7 @@
 
 This program scans all 1024 IP addresses assigned to the DPRK to find which ones are hosting web servers.
 
-![tests](https://github.com/YOUR_USERNAME/wardial/actions/workflows/tests.yml/badge.svg)
+![tests](https://github.com/vwraith55/wardial/actions/workflows/tests.yml/badge.svg)
 
 ## Results
 ````
